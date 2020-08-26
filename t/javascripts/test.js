@@ -7923,26 +7923,27 @@ window.onload = function () {
             },
         });
     };
-    if (60 < $(".plane-3").height()) {
-        setTimeout(function () {
-            $("#loading .error").text("Dein Browser unterst\u00fctzt diese Seite leider nicht. Bitte verwende einen aktuellen Browser! (no font)");
-        }, 1e3);
-        var n = window.setInterval(function () {
-            400 > $(".text-9-2").width() && (window.clearInterval(n), d());
-        }, 500);
-    } else
-        750 > $(window).innerHeight() || 1380 > $(window).innerWidth()
-            ? ($("#loading .error").text("Your screen is too small, this can lead to display errors!"),
-              $('<a href="#">Ok</a>')
-                  .click(function (m) {
-                      m.preventDefault();
-                      m.stopPropagation();
-                      d();
-                  })
-                  .appendTo("#loading .error"))
-            : debug
-            ? window.setTimeout(d, 5e3)
-            : d();
+    // if (60 < $(".plane-3").height()) {
+    //     setTimeout(function () {
+    //         $("#loading .error").text("Unfortunately, your browser does not support this page. Please use a current browser");
+    //     }, 1e3);
+    //     var n = window.setInterval(function () {
+    //         400 > $(".text-9-2").width() && (window.clearInterval(n), d());
+    //     }, 500);
+    // } else
+    //     750 > $(window).innerHeight() || 1380 > $(window).innerWidth()
+    //         ? ($("#loading .error").text("Your screen is too small, this can lead to display errors!"),
+    //           $('<a href="#">Ok</a>')
+    //               .click(function (m) {
+    //                   m.preventDefault();
+    //                   m.stopPropagation();
+    //                   d();
+    //               })
+    //               .appendTo("#loading .error"))
+    //         : debug
+    //         ? window.setTimeout(d, 5e3)
+    //         : 
+            d();
 };
 function setup() {
     controller = new ScrollMagic({ vertical: !1 });
